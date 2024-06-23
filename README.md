@@ -32,10 +32,10 @@
 ![Image of text](/text4.png)
 
 #### Step-5
-        Now we need to pad the huffman code. So, We can divide the code into groups of 8 bits. If the total 
-        number of bit in huffman code is not a perfectly divided by 8 we will not be able to group the 
-        huffman code into groups of 8. So, we need to add a layer of padding at the end which contains only 
-        0s so that it will be perfectly divided by 8.
+        Now we need to pad the huffman code. So, We can divide the code into groups of 8 bits. If the 
+        total number of bit in huffman code is not a perfectly divided by 8 we will not be able to 
+        group the huffman code into groups of 8. So, we need to add a layer of padding at the end 
+        which contains only 0s so that it will be perfectly divided by 8.
 
 ```python
     padded_value = 8 - len(huffman_code) % 8
@@ -45,10 +45,10 @@
 
 ```
 
-        We will also keep a record of how my extra 0s we put at the end of the huffman code and store it in 
-        padded_info so that we can remove them to decrypt the code perfectly. We convert the total number 
-        of 0s into binary and format it into 8 bit number. Then we add it in the beginning of the huffman 
-        code.
+        We will also keep a record of how my extra 0s we put at the end of the huffman code and store 
+        it in padded_info so that we can remove them to decrypt the code perfectly. We convert the 
+        total number of 0s into binary and format it into 8 bit number. Then we add it in the beginning 
+        of the huffman code.
 
 ```python
     padded_info = "{0:08b}".format(padded_value)
